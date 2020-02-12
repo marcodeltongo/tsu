@@ -1,0 +1,37 @@
+{
+  "javascript.validate.enable": true,
+  "typescript.validate.enable": true,
+
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+
+  "markdownlint.config": {
+    "MD013": false,
+    "MD024": false
+  },
+
+  "jest.pathToJest": "npm test --",
+  "jest.enableCodeLens": true,
+  "jest.debugCodeLens.showWhenTestStateIn": ["fail"],
+  "jest.showCoverageOnLoad": false,
+  "jest.enableInlineErrorMessages": true
+}

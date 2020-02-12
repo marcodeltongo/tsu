@@ -1,0 +1,83 @@
+{
+  "name": "@marcodeltongo/tsu",
+  "version": "1.0.0-next.0",
+  "description": "A TypeScript utility library. ツ",
+  "license": "EUPL-1.2",
+  "author": {
+    "name": "Marco Del Tongo",
+    "email": "info@marcodeltongo.com",
+    "url": "https://twitter.com/marcodeltongo"
+  },
+  "keywords": [
+    "typescript",
+    "utilities",
+    "library",
+    "ツ"
+  ],
+  "homepage": "https://github.com/marcodeltongo/tsu",
+  "repository": "github:marcodeltongo/tsu",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "dist/index.js",
+  "module": "dist/tsu.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=13.0.0"
+  },
+  "scripts": {
+    "clear": "rimraf ./dist && rimraf ./coverage",
+    "start": "tsdx watch --target node",
+    "build": "npm run clear && tsdx build --target node",
+    "test": "tsdx test",
+    "test:watch": "tsdx test --watch",
+    "test:coverage": "tsdx test --coverage",
+    "lint": "tsdx lint src test types",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "npm run build",
+    "release:version": "git commit -am \":bookmark: $npm_package_version\" && git tag $npm_package_version && git push && git push --tags && npm publish --access public",
+    "release:patch": "npm version patch --no-git-tag-version && npm run release:version",
+    "release:minor": "npm version minor --no-git-tag-version && npm run release:version",
+    "release:major": "npm version major --no-git-tag-version && npm run release:version",
+    "postpublish": "npm publish --ignore-scripts --@marcodeltongo:registry='https://registry.npmjs.org' --access public && npm version prepatch --preid=next --no-git-tag-version"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@kampaay/eslint-config-kampaay"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint src test types"
+    }
+  },
+  "devDependencies": {
+    "@kampaay/eslint-config-kampaay": "Kampaay/eslint-config-kampaay",
+    "@types/eslint": "^6.1.8",
+    "@types/eslint-plugin-prettier": "^2.2.0",
+    "@types/jest": "^25.1.2",
+    "@types/prettier": "^1.19.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jest-formatting": "^1.2.0",
+    "eslint-plugin-optimize-regex": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-unicorn": "^16.0.0",
+    "husky": "^4.2.3",
+    "jest-mock-console": "^1.0.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.1",
+    "tsdx": "^0.12.3",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {}
+}
