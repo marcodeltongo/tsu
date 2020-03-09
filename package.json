@@ -1,6 +1,6 @@
 {
   "name": "@marcodeltongo/tsu",
-  "version": "1.0.2-next.0",
+  "version": "1.0.2",
   "description": "A TypeScript utility library. ツ",
   "license": "EUPL-1.2",
   "author": {
@@ -16,9 +16,6 @@
   ],
   "homepage": "https://github.com/marcodeltongo/tsu",
   "repository": "github:marcodeltongo/tsu",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "main": "dist/index.js",
   "module": "dist/tsu.esm.js",
   "typings": "dist/index.d.ts",
