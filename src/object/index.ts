@@ -13,7 +13,4 @@
  * limitations under the Licence.
  */
 
-export * from "./types"
-
-export * from "./object"
-export * from "./strings"
+export * from "./keys"

@@ -13,7 +13,7 @@
  * limitations under the Licence.
  */
 
-export * from "./types"
-
-export * from "./object"
-export * from "./strings"
+/**
+ * Simple typing for a function that returns a boolean
+ */
+export type BooleanReturningFunction = () => boolean

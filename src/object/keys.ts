@@ -13,7 +13,20 @@
  * limitations under the Licence.
  */
 
-export * from "./types"
+// eslint-disable-next-line prettier/prettier
+import type { BooleanReturningFunction } from "../types"
 
-export * from "./object"
-export * from "./strings"
+/**
+ * Returns a string with the keys that have a truthy value
+ */
+export function joinKeysWithTruthyValues(
+  object: {
+    [key: string]: boolean | number | string | BooleanReturningFunction
+  },
+  separator = " "
+): string {
+  return Object.entries(object)
+    .map(([k, v]) => ((typeof v === "function" ? v() : !!v) ? k + separator : ""))
+    .join("")
+    .trim()
+}

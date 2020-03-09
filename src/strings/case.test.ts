@@ -15,7 +15,7 @@ import {
   toKebabCase,
   toPascalCase,
   toSnakeCase,
-} from "./case"
+} from ".."
 
 const baseString = "This is a test string"
 const titleString = "This Is A Test String"
