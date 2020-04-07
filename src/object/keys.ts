@@ -13,7 +13,6 @@
  * limitations under the Licence.
  */
 
-// eslint-disable-next-line prettier/prettier
 import type { BooleanReturningFunction } from "../types"
 
 /**

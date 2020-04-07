@@ -29,10 +29,7 @@ export function toCamelCase(source: string): string {
  * Convert source string to kebab-case
  */
 export function toKebabCase(source: string): string {
-  return source
-    .replace(/\W+/g, " ")
-    .toLowerCase()
-    .replace(/\s+/g, "-")
+  return source.replace(/\W+/g, " ").toLowerCase().replace(/\s+/g, "-")
 }
 
 /**
@@ -51,10 +48,7 @@ export function toPascalCase(source: string): string {
  * Convert source string to snake_case
  */
 export function toSnakeCase(source: string): string {
-  return source
-    .replace(/\W+/g, " ")
-    .toLowerCase()
-    .replace(/\s+/g, "_")
+  return source.replace(/\W+/g, " ").toLowerCase().replace(/\s+/g, "_")
 }
 
 /**
